@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>The Budgie Store</title>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Jasmine Scorer">
+    <meta name="description" content="Showcases Budgie Bar drinks">
+    <meta name="keywords" content="Drink, luxury, cocktail, bottled">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/themes/light.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arizonia&family=Climate+Crisis&family=Inter:opsz@14..32&display=swap" rel="stylesheet"> <!--these 3 lines are for fonts-->
+    <link rel="icon" href="images/squarelogo.jpg"> <!-- image from: https://www.facebook.com/photo/?fbid=554988300009825&set=a.554988313343157&locale=fo_FO -->
+</head>
+
+<body>
+<!--HEADER-->
+<nav>
+    <label class="menu" for="burger">&#9776;</label> <!-- standard hamburger icon-->
+    <input id="burger" type="checkbox">
+
+    <a class="sections" href="#story">THE STORY</a>
+    <a class="sections" href="#range">THE RANGE</a>
+    <a href="#home"> <img class= "logo" width="70" src="images/budgie.png" alt="Budgie brand logo"> </a>
+    <a class="sections" href="#gallery">THE GALLERY</a>
+    <a class="sections" href="#custom">THE CUSTOM</a>
+</nav>
+<!--END OF HEADER-->
+
+
+<!--HOME-->
+<div id="home" class="container">
+    <div id="image-container">
+        <img id="main-image" 
+        alt="People clinking glasses together"
+        src="images/hero.png"> <!-- image from: https://threefoxes.com.au/ -->
+    </div> 
+
+    <div class="panel">
+        <h1> We're <span> Budgie Bar. </span> Our mission is to make your parties more special with our <span> expertly </span> crafted cocktails. </h1>
+    </div>
+
+    <div  class="panel">
+    </div>
+</div>
+<!--END OF HOME-->
+
+
+<!--THE STORY-->
+<div id="story">
+    <div class="heading-container">
+        <h1 class="emphasis"> THE STORY </h1>
+        <h1 class="cursive"> the story </h1>
+    </div>
+    
+    <div id="content">
+        <div id="story-left">
+            <div class="paragraph" id="p1"> <!-- am i even using this class anywhere?-->
+                <h2> The Bar </h2>
+                <p> The Budgie Bar started as a cocktail bar in Ringwood, Victoria. The bar features an open floor plan with a sun-filled beer garden, concrete bar and a Palm Springs inspired cacti corner, The Budgie is the perfect place for your Friday after-work drinks or for a Saturday catch-up with friends. </p>
+            </div>
+
+            <div class="paragraph" id="p2">
+                <h2> The Present </h2>
+                <p> And now here you are, looking at The Budgie Bar website. You can order one of our delicious bottled cocktails, or create your personal bottle. Then The Budgie Bar bottle will arrive on your doorstep, pre-made and pre-mixed, specially ready for you to enjoy on a nice summer's day or cold wintery night. </p>
+            </div>
+        </div>
+
+        <div id="story-middle">
+            <div class="flavours">
+                <img class="icon"
+                alt="Citrus icon"
+                src="images/citrus.png"> <!-- icon adapted from: Figma -->
+            
+                <img class="icon"
+                alt="Apple icon"
+                src="images/apple.png"> <!-- icon adapted from: Figma -->
+            
+                <img class="icon"
+                alt="Chocolate icon"
+                src="images/chocolate.png"> <!-- icon adapted from: Figma -->
+            </div>
+        </div>
+
+        <div id="story-right">
+            <div class="paragraph" id="p3">
+                <h2> The Bottled Cocktail </h2>
+                <p> Then The Budgie Bar wanted bigger things. We decided to bottle our famous cocktails and sell them in store and online for all of Australia to enjoy from home. We also want to inspire creativity in our customers by letting you become the mixologist of a custom cocktail; right here on our website. </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--END OF THE STORY-->
+
+
+<!--THE RANGE-->
+<div id="range">
+    <div class="heading-container">
+        <h1 class="emphasis"> THE RANGE </h1>
+        <h1 class="cursive"> the range </h1>
+    </div>
+
+    <!-- SHOELACE UI COMPONENT - IMAGE GALLERY (1a) -->
+    <div id="range-container">
+        <sl-carousel pagination navigation mouse-dragging loop>
+            <sl-carousel-item>
+                <div class="card">
+                    <img class="product-image"
+                    alt="Espresso Martini photo"
+                    src="/images/espresso.png"> <!-- image from: https://store.thebudgiesmuggler.com/products/espresso-martini-500ml-bottled-cocktail -->
+
+                    <div class="product-info">
+                        <h2 class="product-name"> Espresso Martini </h2>
+                        <p> A perfect mixture of vodka, creme de cafe and cold drip coffee from our friends at coffee for the people. This drink is sure to wake you up and have you begging for another. </p>
+                        <button> Read more </button>
+                    </div>
+                </div>
+            </sl-carousel-item>
+
+            <sl-carousel-item>
+                <div class="card">
+                    <img class="product-image"
+                    alt="Coffee & Cigars photo"
+                    src="/images/coffee.png"> <!-- image from: https://store.thebudgiesmuggler.com/products/coffee-cigars-500ml-bottled-cocktail -->
+
+                    <div class="product-info">
+                        <h2 class="product-name"> Coffee & Cigars </h2>
+                        <p> A beverage to warm the soul. Starting strong with a 12 year old scotch whisky, you move through delicate coffee notes to finish with subtle hints of orange - use this classic-style, but new-age cocktail to kick off your night or settle with a night cap. </p>
+                        <button> Read more </button>
+                    </div>
+                </div>
+            </sl-carousel-item>
+
+            <sl-carousel-item>
+                <div class="card">
+                    <img class="product-image"
+                    alt="Rum Old Fashioned photo"
+                    src="/images/rum.png"> <!-- image from: https://store.thebudgiesmuggler.com/products/rum-old-fashioned-500ml-bottled-cocktail -->
+
+                    <div class="product-info">
+                        <h2 class="product-name"> Rum Old Fashioned </h2>
+                        <p> Now we're talking. The Old Fashioned, the original cocktail: spirit, sugar, bitters and water... What a combo! At Budgie Bar, you know it can't be the standard - we love it with rum! Simple yet elegant, this drink will have you dreading an empty glass. </p>
+                        <button> Read more </button>
+                    </div>
+                </div>
+            </sl-carousel-item>
+
+            <sl-carousel-item>
+                <div class="card">
+                    <img class="product-image"
+                    alt="Negroni Classico photo"
+                    src="/images/negroni.png"> <!-- image from: https://store.thebudgiesmuggler.com/products/negroni-classico-500ml-bottled-cocktail -->
+
+                    <div class="product-info">
+                        <h2 class="product-name"> Negroni Classico </h2>
+                        <p> Named after The Count himself, this bitter concoction is a divisive flavour in the cocktail world but a negroni done right is a beautiful thing. Those after something bitter, delicate and delicious know that this is the drink for them. </p>
+                        <button> Read more </button>
+                    </div>
+                </div>
+            </sl-carousel-item>
+
+            <sl-carousel-item>
+                <div class="card">
+                    <img class="product-image"
+                    alt="Classic Martini Photo"
+                    src="/images/martini.png"> <!-- image from: https://store.thebudgiesmuggler.com/products/classic-martini-500ml-bottled-cocktail -->
+
+                    <div class="product-info">
+                        <h2 class="product-name"> Classic Martini </h2>
+                        <p> A classic for a reason, this perfectly blended martini is the classiest way to enjoy a drink. A simple cocktail with a complex taste makes a normal night feel special. Serve it as cold as possible and it will guarantee to make you smile. </p>
+                        <button> Read more </button>
+                    </div>
+                </div>
+            </sl-carousel-item>
+        </sl-carousel>
+    </div>
+</div>
+<!--END OF THE RANGE-->
+
+
+<!--QUOTE-->
+<div id="quote">
+    <div>
+        <img id="quote-image-1"
+        alt="5 pack of bottled cocktails"
+        src="/images/drinks1.png"> <!-- image from: https://store.thebudgiesmuggler.com/cdn/shop/files/Group_1.jpg?v=1710734921&width=1400 -->
+
+        <img id="quote-image-2"
+        alt="4 pack of bottled cocktails"
+        src="/images/drinks2.png"> <!-- image from: https://store.thebudgiesmuggler.com/ -->
+    </div> 
+
+    <div id="call-out">
+        <h1> Meticulously <span> designed. </span> Lovingly <span> tried. </span> Rigorously <span> tested. </span> </h1>
+    </div>
+</div>
+<!--END OF QUOTE-->
+
+
+<!--THE GALLERY-->
+<div id="gallery">
+    <div class="heading-container">
+        <h1 class="emphasis"> THE GALLERY </h1>
+        <h1 class="cursive"> the gallery </h1>
+    </div>
+    
+    <div id="gallery-upper">
+        <img class="gallery-images"
+        alt="Cocktail in glass"
+        src="/images/glass.png"> <!-- image from: https://curatif.com/?srsltid=AfmBOoqhET_sn1jXuySdTmf41iYml7Wmtlh8pkDOHrmso4z6r1CT4o92 -->
+
+        <!-- SHOELACE UI COMPONENT - DRAWER (1a) -->
+        <div class="drawer-container">
+            <sl-drawer contained class="drawer-contained" style="--size: 50%;">
+                This is what you will look like when you bring Budgie Bar cocktails to the function.
+                <sl-button slot="footer" variant="primary">Close</sl-button>
+            </sl-drawer>
+    
+            <img class="gallery-images" 
+            alt="Friends doing cheers with cocktails"
+            src="/images/cheers.jpg"> <!-- image from: https://store.thebudgiesmuggler.com/ -->
+        </div>
+
+        <img class="gallery-images"
+        alt="Mixologist pouring a cocktail"
+        src="/images/pour.jpg"> <!-- image from: https://www.thebudgiebar.com/gallery/ -->
+    </div>
+
+    <div id="gallery-middle">
+    </div>
+
+    <div id="gallery-lower">
+        <img class="gallery-images"
+        alt="People clinking glasses together"
+        src="/images/hero.png">
+
+        <div class="drawer-container">
+            <sl-drawer label="Drawer" contained class="drawer-contained" style="--size: 50%;">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                <sl-button slot="footer" variant="primary">Close</sl-button>
+            </sl-drawer>
+    
+            <img class="gallery-images"
+            alt="Friends drinking cocktails on a beach"
+            src="/images/beach.jpg"> <!-- image from: https://store.thebudgiesmuggler.com/ -->
+        </div>
+
+        <img class="gallery-images"
+        alt="Picnic basket full of cocktails"
+        src="/images/picnic.jpg"> <!-- image from: https://store.thebudgiesmuggler.com/ -->
+    </div>
+
+    <div class="click-me" id="click-me-1" ></div>
+    <div class="click-me" id="click-me-2" ></div>
+</div>
+<!--END OF THE GALLERY-->
+
+
+<!--THE CUSTOM-->
+<div id="custom">
+    <div id="custom-left">
+        <div class="flavours">
+            <!-- SHOELACE UI COMPONENT - TOOLTIP (1a) -->
+            <sl-tooltip content="Citrus">
+                <img class="icon" id="citrus"
+                alt="Citrus icon"
+                src="images/citrus.png">
+            </sl-tooltip>
+
+            <sl-tooltip content="Apple">
+                <img class="icon"  id="apple"
+                alt="Apple icon"
+                src="images/apple.png">
+            </sl-tooltip>
+
+            <sl-tooltip content="Chocolate">
+                <img class="icon"  id="chocolate"
+                alt="Chocolate icon"
+                src="images/chocolate.png">
+            </sl-tooltip>
+
+            <sl-tooltip content="Cinnamon">
+                <img class="icon"  id="cinnamon"
+                alt="Cinnamon icon"
+                src="images/cinnamon.png"> <!-- icon adapted from: Figma -->
+            </sl-tooltip>
+
+            <sl-tooltip content="Floral">
+                <img class="icon"  id="floral"
+                alt="Floral icon"
+                src="images/floral.png"> <!-- icon adapted from: Figma -->
+            </sl-tooltip>
+        </div>
+    </div>
+
+    <div id="custom-middle">
+        <div id="custom-heading">
+            <h1 class="emphasis"> THE CUSTOM </h1>
+            <h1 class="cursive" id="custom-type"> the custom </h1>
+        </div>
+
+        <div id="bottle">
+            <img id="bottle-png"
+            alt="..."
+            src="images/empty.png"> <!-- image from: ... -->
+
+            <div id="circle"></div>
+
+            <p id="description"> None of our products quite your cup of liquor? No worries, drag in your desired flavours and we'll do the hard stuff.</p>
+            <button> Bottle It </button>
+        </div>
+    </div>
+
+    <div id="custom-right">
+        <div class="flavours">
+            <sl-tooltip content="Chilli">
+                <img class="icon" id="chilli"
+                alt="Chilli icon"
+                src="images/chilli.png"> <!-- icon adapted from: Figma -->
+            </sl-tooltip>
+
+            <sl-tooltip content="Coffee">
+                <img class="icon"  id="coffeebean"
+                alt="Coffee icon"
+                src="images/coffeebean.png"> <!-- icon adapted from: Figma -->
+            </sl-tooltip>
+
+            <sl-tooltip content="Coconut">
+                <img class="icon"  id="coconut"
+                alt= "Coconut icon"
+                src="images/coconut.png"> <!-- icon adapted from: Figma -->
+            </sl-tooltip>
+
+            <sl-tooltip content="Peach">
+                <img class="icon"  id="peach"
+                alt="Peach icon"
+                src="images/peach.png"> <!-- icon adapted from: Figma -->
+            </sl-tooltip>
+
+            <sl-tooltip content="Vanilla">
+                <img class="icon"  id="vanilla"
+                alt="Vanilla icon"
+                src="images/vanilla.png"> <!-- icon adapted from: Figma -->
+            </sl-tooltip>
+        </div>
+    </div>
+</div>
+<!--END OF THE CUSTOM-->
+
+
+<!--FOOTER-->
+<footer>
+    <div id="footer-left">
+        <img src="images/budgie.png" width="220px"> 
+    </div>
+
+    <div id="footer-right">
+        <a class="footer-sections" href="#story">THE STORY</a>
+        <a class="footer-sections" href="#range">THE RANGE</a>
+        <a class="footer-sections" href="#gallery">THE GALLERY</a>
+        <a class="footer-sections" href="#custom">THE CUSTOM</a>
+    </div>
+</footer>
+<!--END OF FOOTER-->
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/shoelace-autoloader.js"> </script> <!--link to shoelace-->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script> <!-- links to gsap -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/Draggable.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/InertiaPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="main.js"> </script>
+
+</body>
+</html>

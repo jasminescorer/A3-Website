@@ -1,0 +1,506 @@
+/* colour palette: 
+#efe7da off-white
+#294039 dark green
+#851910 deep red
+#cd3631 lighter red/orange
+#bf8a68 brown
+*/
+
+/* ==========GENERAL STYLING============= */
+body {
+    margin: 0px;
+    background-color: #efe7da;
+    overflow-x: hidden;
+}
+
+.logo {
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+#story, #range, #gallery, #custom { /* i removed home from here for gsap */
+    width: 100%;
+    height: 90vh;
+    background-color: #efe7da;
+    display: flex; /* maybe put display flex here */
+}
+
+button {
+    background-color: #294039;
+    color: white;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 18px;
+    border-radius: 30px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: 0.4s linear;
+}
+
+button:hover {
+    filter: drop-shadow(3px 5px #851910);
+}
+
+.icon {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    filter: drop-shadow(10px 10px 20px #222);
+    justify-content: center; /* this is not doing anything */
+    z-index: 998;
+}
+
+
+/* ==========TYPOGRAPHY STYLING============= */
+.cursive {
+    font-family: 'Arizonia';
+    font-size: 70px;
+    color: #851910;
+    position: relative;
+    left: 300px;
+    top: 15px;
+}
+
+.emphasis { /* add to general styling */
+    font-family: 'Climate Crisis';
+    font-size: 60px;
+    color: #bf8a68;
+    position: absolute;
+}
+
+span {
+    font-family: 'Climate Crisis';
+    font-size: 70px;
+    color: #851910;
+}
+
+.heading-container { /* add to general styling */
+    width: 100%;
+    display: flex;
+}
+
+h1 {
+    font-size: 70px;
+}
+
+h1, h2, p {
+    font-family: 'Inter';
+}
+
+h2 {
+    font-size: 35px;
+}
+
+.sections, .footer-sections {
+    color: #851910;
+    font-family: 'Inter';
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ==========HEADER STYLING============= */
+nav {
+    width: 98%;
+    height: 50px;
+    border-radius: 25px;
+    background-color: #bf8a68;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    position: sticky;
+    top: 15px;
+    z-index: 999; /* to ensure navigation stays above all other parts when scrolling */
+    filter: drop-shadow(5px 5px 5px #222);
+}
+
+.sections:hover {
+    color: #294039;
+}
+
+#burger, .menu { /* setting up hamburger menu for responsive design later */
+    display: none;
+}
+
+/* ==========HOME STYLING============= */
+#home { /* i removed home from here for gsap */
+    background-color: #efe7da;
+    padding-top: 30px;
+}
+
+#image-container {
+    width: 700px;
+    background-color: #efe7da;
+    z-index: 997;
+}
+
+#main-image {
+    height: 700px;
+    width: 550px;
+    object-fit: cover;
+    margin: 70px;
+    border-radius: 25px;
+}
+
+.container {
+    width: 500%;
+    height: 90%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.panel {
+    width: 200%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+}
+
+
+/* ==========THE STORY STYLING============= */
+#story {
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+#content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.paragraph {
+    display: none;
+}
+
+
+#story-left {
+    width: 45%;
+    height: 60vh;
+    text-align: right;
+}
+
+#story-middle {
+    width: 10%;
+    height: 60vh;
+    display: flex;
+    width: 4px;
+    background-color: #294039;
+    margin: auto;
+    margin-top: 20px;
+}
+
+#story-right {
+    width: 45%;
+    height: 60vh;
+    text-align: left;
+    align-content: center;
+}
+
+#p1 {
+    width: 500px;
+    position: relative;
+    animation-name: leftAnimation;
+    animation-duration: 2s;
+    transition-timing-function: ease-in;
+    animation-direction: reverse;
+    left: 240px;
+}
+
+/* CSS ANIMATION USING KEYFRAMES (2a) */
+@keyframes leftAnimation {
+    0% {left:240px; top:0px;}
+    100% {left:0px; top:0px;}
+}
+
+#p2 {
+    top: 170px;
+    width: 500px;
+    position: relative;
+    animation-name: leftAnimation2;
+    animation-duration: 2s;
+    transition-timing-function: ease-in;
+    animation-direction: reverse;
+    left: 240px;
+}
+
+@keyframes leftAnimation2 {
+    0% {left:240px; top:170px;}
+    100% {left:0px; top:170px;}
+}
+
+#p3 {
+    width: 500px;
+    position: relative;
+    animation-name: leftAnimation3;
+    animation-duration: 2s;
+    transition-timing-function: ease-in;
+    animation-direction: reverse;
+    left: 40px;
+}
+
+@keyframes leftAnimation3 {
+    0%   {left:40px; top:0px;}
+    100% {left:270px; top:0px;}
+}
+
+
+/* ==========THE RANGE STYLING============= */
+#range {
+    flex-direction: column;
+    margin-bottom: 100px;
+}
+
+#range-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+sl-carousel {
+    width: 900px;
+    height: 600px;
+}
+
+sl-carousel-item {
+    --aspect-ratio: 1/1;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+    background-color: #bf8a68;
+}
+
+.product-image {
+    width: 400px;
+    height: 500px;
+    border-radius: 20px 0px 0px 20px;
+    object-fit: cover;
+}
+
+.product-info {
+    margin: auto;
+    padding-left: 40px;
+    padding-right: 20px;
+    color: #851910;
+}
+
+.product-name {
+    margin-top: 0;
+}
+
+
+/* ==========QUOTE STYLING============= */
+#quote {
+    background-color: #bf8a68;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    position: relative;
+}
+
+#quote-image-1 {
+    position: absolute;
+    width: 550px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 0px 0px 20px 0px;
+}
+
+#quote-image-2 {
+    position: absolute;
+    width: 550px;
+    height: 350px;
+    object-fit: cover;
+    bottom: 0;
+    right: 0;
+    border-radius: 20px 0px 0px 0px;
+}
+
+#call-out {
+    width: 100%;
+    margin: auto;
+    margin-left: 150px;
+}
+
+/* ==========THE GALLERY STYLING============= */
+#gallery {
+    flex-direction: column;
+    position: relative;
+    margin: 0;
+}
+
+#gallery-upper {
+    height: 35%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: -90px;
+}
+
+#gallery-middle {
+    height: 4px;
+    width: 100%;
+    display: flex;
+    background-color: #294039;
+    margin: auto;
+}
+
+#gallery-lower {
+    height: 35%;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 150px;
+    margin-right: -90px;
+}
+
+.gallery-images {
+    height: 100%;
+    border-radius: 25px;
+}
+
+.click-me {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    top: 220px;
+    left: 605px;
+    background-color: #294039;
+}
+
+#click-me-1 {
+    top: 220px;
+    left: 605px;
+}
+
+#click-me-2 {
+    top: 545px;
+    left: 900px;
+}
+
+.drawer-container {
+    position: relative;
+    font-family: 'Inter';
+    font-size: 14px;
+}
+
+sl-drawer::part(panel) {
+    border-radius: 0 25px 25px 0;
+}
+
+
+/* ==========THE CUSTOM STYLING============= */
+#custom {
+    flex-direction: row;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    height: 800px;
+}
+
+#custom-left {
+    height: 750px;
+    display: flex;
+    width: 4px;
+    background-color: #294039;
+    margin: auto;
+}
+
+.flavours {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 15%;
+    margin-left: -48px;
+}
+
+#custom-middle {
+    width: 70%;
+    height: 100vh;
+}
+
+#custom-heading {
+    display: flex;
+    justify-content: center;
+    margin-top: -30px;
+}
+
+#custom-type {
+    left: 200px;
+}
+
+#bottle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 400px;
+    margin: auto;
+}
+
+#bottle-png {
+    width: 350px;
+    z-index: 700;
+}
+
+#circle {
+    width: 500px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top: -50px;
+    background-color: #bf8a68;
+}
+
+#description {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    width: 500px;
+}
+
+#custom-right {
+    height: 750px;
+    display: flex;
+    width: 4px;
+    background-color: #294039;
+    margin: auto;
+}
+
+
+/* ==========FOOTER STYLING============= */
+footer {
+    width: 100%;
+    height: 200px;
+    background-color: #bf8a68;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+#footer-left {
+    width: 50%;
+    margin-left: 20px;
+}
+
+#footer-right {
+    width: 50%;
+    margin-right: 20px;
+    text-align: right;
+    justify-content: flex-end;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-sections {
+    cursor: pointer;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-decoration: underline; /* affordance principle: looks like a link */
+    font-size: 15px;
+}
