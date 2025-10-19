@@ -10,7 +10,7 @@
     <meta name="description" content="Showcases Budgie Bar drinks">
     <meta name="keywords" content="Drink, luxury, cocktail, bottled">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/themes/light.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/themes/light.css">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,14 +21,17 @@
 <body>
 <!--HEADER-->
 <nav>
-    <label class="menu" for="burger">&#9776;</label> <!-- standard hamburger icon-->
+    <label class="menu" for="burger">&#9776;</label> <!-- standard hamburger icon -->
     <input id="burger" type="checkbox">
+    <a href="#home"> <img id= "left-logo" width="70" src="images/budgie.png" alt="Budgie brand logo"> </a>
 
-    <a class="sections" href="#story">THE STORY</a>
-    <a class="sections" href="#range">THE RANGE</a>
-    <a href="#home"> <img class= "logo" width="70" src="images/budgie.png" alt="Budgie brand logo"> </a>
-    <a class="sections" href="#gallery">THE GALLERY</a>
-    <a class="sections" href="#custom">THE CUSTOM</a>
+    <div id="collection">
+        <a class="sections" href="#story">THE STORY</a>
+        <a class="sections" href="#range">THE RANGE</a>
+        <a href="#home"> <img class= "logo" width="70" src="images/budgie.png" alt="Budgie brand logo"> </a>
+        <a class="sections" href="#gallery">THE GALLERY</a>
+        <a class="sections" href="#custom">THE CUSTOM</a>
+    </div>
 </nav>
 <!--END OF HEADER-->
 
@@ -60,7 +63,7 @@
     
     <div id="content">
         <div id="story-left">
-            <div class="paragraph" id="p1"> <!-- am i even using this class anywhere?-->
+            <div class="paragraph" id="p1">
                 <h2> The Bar </h2>
                 <p> The Budgie Bar started as a cocktail bar in Ringwood, Victoria. The bar features an open floor plan with a sun-filled beer garden, concrete bar and a Palm Springs inspired cacti corner, The Budgie is the perfect place for your Friday after-work drinks or for a Saturday catch-up with friends. </p>
             </div>
@@ -90,7 +93,7 @@
         <div id="story-right">
             <div class="paragraph" id="p3">
                 <h2> The Bottled Cocktail </h2>
-                <p> Then The Budgie Bar wanted bigger things. We decided to bottle our famous cocktails and sell them in store and online for all of Australia to enjoy from home. We also want to inspire creativity in our customers by letting you become the mixologist of a custom cocktail; right here on our website. </p>
+                <p> But The Budgie Bar wanted bigger things. We decided to bottle our famous cocktails and sell them in store and online for all of Australia to enjoy from home. We also want to inspire creativity in our customers by letting you become the mixologist of a custom cocktail; right here on our website. </p>
             </div>
         </div>
     </div>
@@ -195,9 +198,11 @@
         src="/images/drinks2.png"> <!-- image from: https://store.thebudgiesmuggler.com/ -->
     </div> 
 
-    <div id="call-out">
+    <div class="call-out">
         <h1> Meticulously <span> designed. </span> Lovingly <span> tried. </span> Rigorously <span> tested. </span> </h1>
     </div>
+
+    <div class="call-out"> </div>
 </div>
 <!--END OF QUOTE-->
 
@@ -215,16 +220,11 @@
         src="/images/glass.png"> <!-- image from: https://curatif.com/?srsltid=AfmBOoqhET_sn1jXuySdTmf41iYml7Wmtlh8pkDOHrmso4z6r1CT4o92 -->
 
         <!-- SHOELACE UI COMPONENT - DRAWER (1a) -->
-        <div class="drawer-container">
-            <sl-drawer contained class="drawer-contained" style="--size: 50%;">
-                This is what you will look like when you bring Budgie Bar cocktails to the function.
-                <sl-button slot="footer" variant="primary">Close</sl-button>
-            </sl-drawer>
     
-            <img class="gallery-images" 
-            alt="Friends doing cheers with cocktails"
-            src="/images/cheers.jpg"> <!-- image from: https://store.thebudgiesmuggler.com/ -->
-        </div>
+        <img class="gallery-images" 
+        alt="Friends doing cheers with cocktails"
+        src="/images/cheers.jpg"> <!-- image from: https://store.thebudgiesmuggler.com/ -->
+
 
         <img class="gallery-images"
         alt="Mixologist pouring a cocktail"
@@ -240,9 +240,9 @@
         src="/images/hero.png">
 
         <div class="drawer-container">
-            <sl-drawer label="Drawer" contained class="drawer-contained" style="--size: 50%;">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                <sl-button slot="footer" variant="primary">Close</sl-button>
+            <sl-drawer id="drawer-contained" contained class="drawer-contained" style="--size: 50%;">
+                Create special moments with your friends that bring a smile to their face.
+                <sl-button id="sl-button" slot="footer" variant="primary">Close</sl-button>
             </sl-drawer>
     
             <img class="gallery-images"
@@ -255,8 +255,17 @@
         src="/images/picnic.jpg"> <!-- image from: https://store.thebudgiesmuggler.com/ -->
     </div>
 
-    <div class="click-me" id="click-me-1" ></div>
-    <div class="click-me" id="click-me-2" ></div>
+    <svg id="sound-btn" viewBox="0 0 100 100" width="200" height="200">
+        <path id="circle" d="M50 37.5a12.5 12.5 0 1 1 0 25a12.5 12.5 0 1 1 0-25z" fill="#294039"/> <!-- svg adapted from: GSAP -->
+        <path id="bird" d="M69.06 47.83l-3.62-2.42a9.37 9.37 0 0 0-18.3 2.83v2.66l-14.72 18.39a1.25 1.25 0 0 0 .97 2.03h16.25a16.17 16.17 0 0 0 16.17-16.17v-3.06l3.19-2.12a1.25 1.25 0 0 0 0-2.07Zm-19.65 10.56-6.22 7.47a1.25 1.25 0 1 1-1.92-1.59l6.22-7.47a1.25 1.25 0 0 1 1.92 1.59Zm8.39-9.48a1.87 1.87 0 1 1 1.87-1.87 1.87 1.87 0 0 1-1.87 1.87Z" fill="#294039"/> <!-- svg adapted from: https://www.svgrepo.com/svg/364263/bird-fill -->
+    </svg>
+
+    <svg id="sound-btn-2" viewBox="0 0 100 100" width="200" height="200">
+        <path id="circle-2" d="M50 37.5a12.5 12.5 0 1 1 0 25a12.5 12.5 0 1 1 0-25z" fill="#294039"/>
+        <path id="bird-2" d="M69.06 47.83l-3.62-2.42a9.37 9.37 0 0 0-18.3 2.83v2.66l-14.72 18.39a1.25 1.25 0 0 0 .97 2.03h16.25a16.17 16.17 0 0 0 16.17-16.17v-3.06l3.19-2.12a1.25 1.25 0 0 0 0-2.07Zm-19.65 10.56-6.22 7.47a1.25 1.25 0 1 1-1.92-1.59l6.22-7.47a1.25 1.25 0 0 1 1.92 1.59Zm8.39-9.48a1.87 1.87 0 1 1 1.87-1.87 1.87 1.87 0 0 1-1.87 1.87Z" fill="#294039"/>
+    </svg>
+
+    <div id="drawer-btn"> </div>
 </div>
 <!--END OF THE GALLERY-->
 
@@ -307,9 +316,9 @@
         <div id="bottle">
             <img id="bottle-png"
             alt="..."
-            src="images/empty.png"> <!-- image from: ... -->
+            src="images/empty.png"> <!-- image from: https://www.seekbottles.com/product/square-flat-200ml-glass-coffee-drinks-bottle-with-metal-caps/ -->
 
-            <div id="circle"></div>
+            <div id="ground-circle"></div>
 
             <p id="description"> None of our products quite your cup of liquor? No worries, drag in your desired flavours and we'll do the hard stuff.</p>
             <button> Bottle It </button>
@@ -356,7 +365,7 @@
 <!--FOOTER-->
 <footer>
     <div id="footer-left">
-        <img src="images/budgie.png" width="220px"> 
+        <img alt="logo" src="images/budgie.png" width="220"> 
     </div>
 
     <div id="footer-right">
@@ -369,11 +378,12 @@
 <!--END OF FOOTER-->
 
     <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/shoelace-autoloader.js"> </script> <!--link to shoelace-->
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script> <!-- links to gsap -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/MorphSVGPlugin.min.js"></script> <!-- links to gsap -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script> 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/Draggable.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/InertiaPlugin.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
-    <script src="main.js"> </script>
+    <script src="main.js"> </script> <!-- links to my js code -->
 
 </body>
 </html>
